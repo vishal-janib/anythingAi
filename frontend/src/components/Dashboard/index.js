@@ -12,11 +12,14 @@ const Dashboard = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:5000/api/v1/tasks", {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const response = await fetch(
+      "https://anythingai-1-r29q.onrender.com/api/v1/tasks",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    });
+    );
 
     const data = await response.json();
 
@@ -38,7 +41,7 @@ const Dashboard = () => {
       return;
     }
 
-    await fetch("http://localhost:5000/api/v1/tasks", {
+    await fetch("https://anythingai-1-r29q.onrender.com/api/v1/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

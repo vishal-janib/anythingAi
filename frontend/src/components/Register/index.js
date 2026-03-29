@@ -14,13 +14,16 @@ const Register = () => {
 
     const userDetails = { username, email, password };
 
-    const response = await fetch("http://localhost:5000/api/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      "https://anythingai-1-r29q.onrender.com/api/auth/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userDetails),
       },
-      body: JSON.stringify(userDetails),
-    });
+    );
 
     const data = await response.json();
 
