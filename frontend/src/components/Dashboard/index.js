@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     getTasks();
-  }, [getTasks]);
+  }, []);
 
   const createTask = async () => {
     if (title === "") {
